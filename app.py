@@ -11,10 +11,13 @@ from ai_parser import analyze_statement_with_ai
 from pdf_generator import generate_passport_pdf
 
 # ==========================================
-# MUAT VARIABEL ENVIRONMENT (.env)
+# MUAT VARIABEL ENVIRONMENT (.env / Streamlit Secrets)
 # ==========================================
 load_dotenv()
 DEFAULT_GROQ_KEY = os.getenv("GROQ_API_KEY", "")
+# Cek apakah ada di st.secrets (Streamlit Cloud Secrets)
+if not DEFAULT_GROQ_KEY and hasattr(st, "secrets") and "GROQ_API_KEY" in st.secrets:
+    DEFAULT_GROQ_KEY = st.secrets["GROQ_API_KEY"]
 
 # ==========================================
 # FUNGSI FORMAT RUPIAH SINGKAT UNTUK METRIK
@@ -54,7 +57,7 @@ with st.sidebar:
 
     if DEFAULT_GROQ_KEY:
         groq_api_key = DEFAULT_GROQ_KEY
-        st.success("✅ Groq API Key aktif dari server (.env)")
+        st.success("✅ Groq API Key aktif dari server (Cloud Secrets)")
     else:
         groq_api_key = st.text_input(
             "Groq API Key (Opsional untuk Live LLM)",
