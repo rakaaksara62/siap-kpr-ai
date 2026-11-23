@@ -1,0 +1,60 @@
+# ==========================================
+# LINGKUNGAN VIRTUAL & DEPENDENSI (PYTHON)
+# ==========================================
+venv/
+env/
+ENV/
+.venv/
+env.bak/
+venv.bak/
+
+# ==========================================
+# KREDENSIAL & VARIABEL RAHASIA (SECURITY)
+# ==========================================
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# BYTECODE & ARTIFAK PYTHON
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ==========================================
+# STREAMLIT RUNTIME & LOGS
+# ==========================================
+.streamlit/secrets.toml
+*.log
+
+# ==========================================
+# AGENT / IDE CACHE & SYSTEM DIRECTORIES
+# ==========================================
+.agents/
+.claude/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db

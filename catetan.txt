@@ -1,0 +1,13 @@
+Pemasukan Bersih Bulanan (Net Income) = (Total Pemasukan Usaha atau Gaji 3 Bulan) / 3
+
+Total Cicilan Eksisting = (Total Tagihan Paylater + Pinjol + Kartu Kredit + Cicilan Kendaraan 3 Bulan) / 3
+
+Batas Aman Debt Burden Ratio (DBR) Bank = 35%
+
+Kapasitas Cicilan KPR Maksimal = (0.35 x Net Income) - Beban Cicilan Eksisting
+(Jika hasilnya negatif atau dibawah 1.000.000, artinya pengguna belum siap mengambil KPR)
+
+Estimasi Plafon KPR (Asumsi Tenor 15 tahun, Bunga flat/efektif rata-rata ~8.5%):
+Estimasi Plafon KPR = Kapasitas Cicilan KPR Maksimal x 100
+(Contoh: Jika kapasitas cicilan KPR maksimal 2.5 juta/bulan, maka plafon KPR yang aman sekitar 250 juta)
+
